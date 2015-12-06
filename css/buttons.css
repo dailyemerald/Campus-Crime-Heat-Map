@@ -1,0 +1,168 @@
+.btn.btn-circle.dropdown-toggle{
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 11px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  background-color: white;
+  border-color: black;
+  vertical-align: center;
+    z-index: 4;
+}
+
+
+.btn.btn-circle.dropdown-toggle:hover{
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 11px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  background-color: white;
+  border-color: black;
+    z-index: 4;
+
+}
+
+
+#twitter{
+  width: 45px;
+  height: 45px;
+  float: right;
+  margin-top:.75%;
+}
+
+#emerald{
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-left: 1%;
+  margin-top:1.5%;
+  margin-right: 1%;
+}
+
+
+
+#bt1
+ { position: absolute;
+	 top: 15%;
+	 left: 70%;
+	 z-index: 2;
+ }
+
+ #bt2
+  { position: absolute;
+ 	 top: 42%;
+ 	 left: 45%;
+ 	 z-index: 1;
+  }
+
+  #bt3
+   { position: absolute;
+  	 top: 90%;
+  	 left: 26%;
+  	 z-index: 2;
+   }
+
+
+.dropdown-menu.pull-left{
+  width: 610px !important;
+  height: 470px !important;
+  border-radius: 10px;
+  padding-left: 4px;
+  z-index: 3;
+
+
+}
+.dropdown-menu.pull-right{
+  width: 610px !important;
+  height: 340px !important;
+  z-index: 3;
+  border-radius: 10px;
+  padding-left: 4px;
+
+}
+#button3.dropdown-menu{
+  width: 910px !important;
+  height: 520px !important;
+  z-index: 3;
+  border-radius: 10px;
+  padding-left: 4px;
+
+}
+
+#picture1 img{
+  max-width:95%;
+  max-height:90%;
+  padding-bottom: 1%;
+}
+
+#picture2 img{
+  max-width:95%;
+  max-height:90%;
+  padding-bottom: 1%;
+}
+
+
+#picture3 img{
+  max-width:95%;
+  max-height:90%;
+  padding-bottom: 1%;
+}
+
+#picture4 img{
+  max-width:95%;
+  max-height:90%;
+  padding-bottom: 1%;
+}
+
+#picture1.dropdown-menu.pull-left{
+  margin-left: 40px;
+  width: 200px !important;
+  height: 200px !important;
+  z-index: 3;
+  border-radius: 10px;
+
+}
+
+#picture2.dropdown-menu.pull-right{
+  width: 200px !important;
+  height: 200px !important;
+  z-index: 3;
+  border-radius: 10px;
+
+
+}
+
+#picture3.dropdown-menu.pull-right{
+  width: 250px !important;
+  height: 170px !important;
+  z-index: 3;
+  border-radius: 10px;
+  margin-right: 30px;
+  margin-bottom: 300px;
+
+}
+
+
+#picture4.dropdown-menu.pull-right{
+  width: 250px !important;
+  height: 170px !important;
+  z-index: 3;
+  border-radius: 10px;
+  margin-right: 30px;
+  margin-bottom: 100px;
+
+
+}
+
+
+
+
+
+.dropdown-menu.option{
+  z-index: 2;
+}

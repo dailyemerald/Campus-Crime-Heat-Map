@@ -1,0 +1,198 @@
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  html{
+    font-size: 100% !important;
+  }
+
+ }
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-xs-min) {
+  html{
+    font-size: 100% !important;
+  }
+
+ }
+
+
+
+#navBar{
+	position: fixed;
+  width: 80%;
+	height: 60px;
+  z-index:10;
+	overflow: hidden;
+  background-color: white;
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
+	border-top: none;
+  padding-bottom:.3%;
+}
+
+
+
+body{
+    max-width: 100%;
+    overflow-x:hidden !important;
+}
+
+html{
+  overflow-x:hidden !important;
+}
+
+div{
+  font-family: 'Exo-Regular';
+}
+
+@font-face {
+    font-family:'Exo-Regular';
+    src: url(../fonts/Exo-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*MAPS*/
+
+iframe{
+  width: 100%;
+  height:100%;
+}
+
+#defaultMap{
+
+  	display: none;
+}
+#criminalTresspassingMap{
+  display: none;
+}
+
+#criminalMischiefMap{
+  display: none;
+}
+#theftMap{
+  display: none;
+}
+#warrentArrestMap{
+  display: none;
+}
+
+#bikeTheftMap{
+  display: none;
+}
+
+/*end maps*/
+
+#bodyMap{
+  background-color: white;
+  height: 100vh;
+	position: relative;
+  border-right: 1px;
+  border-right-style: solid;
+  border-right-color: black;
+}
+
+
+
+#sideColumn{
+  height: 100%;
+  background-color: white;
+  padding: 0;
+  margin-top: 20px;
+  z-index: 0;
+
+
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#googft-mapCanvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#googft-mapCanvas2 {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.btn-group{
+	width: 100%;
+	border-radius: 0 !important;
+}
+
+#fullwidth{
+  width: 100%;
+}
+
+button.btn.btn-block.dropdown-toggle:hover{
+  background-color: #9FCC3B;
+  color:white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  max-width: 120%;
+  padding: 0;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-left: none;
+  border-top: none;
+  z-index: 4;
+}
+
+button.btn.btn-block.dropdown-toggle{
+	width: 100%;
+	background-color: white;
+	border-radius: 0 !important;
+	font-size: 120%;
+  padding: 0;
+  z-index: 4;
+  border-top: none;
+
+}
+
+
+
+
+button.btn.btn-block:hover{
+  background-color: #9FCC3B;
+  color:white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  max-width: 120%;
+  padding: 0;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-left: none;
+  z-index: 4;
+}
+
+button.btn.btn-block{
+	width: 100%;
+	background-color: white;
+	border-radius: 0 !important;
+	font-size: 120%;
+  padding: 0;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-left: none;
+
+}
+
+img{
+	width:100%;
+	height:100%;
+
+}
