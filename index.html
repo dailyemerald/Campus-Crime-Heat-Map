@@ -1,180 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
-    <link href="css/firstpage.css" rel="stylesheet" type="text/css">
-    <script src="js/jQuery/jquery-2.1.1.js" type="text/javascript">
-    </script>
-    <script async charset="utf-8" src="https://platform.twitter.com/widgets.js">
-    </script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js">
-    </script>
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&amp;v=3"></script>
-    <title>Crimes</title>
-</head>
-<body>
-
- <div class="container-fluid" >
-        <div class="row" style="padding:0">
-
-          <div class="animated bounceInLeft" >
-            <div class="col-md-10 " id="bodyMap" style="padding:0">
-              <div id="navBar">
-                <a href="https://www.dailyemerald.com"><img id="emerald" src="images/Emerald-logo.jpg"></a>
-                <a href="https://www.twitter.com/DailyEmerald"><img id="twitter" src="images/twitter.png"></a>
-                <div style="padding-left: 2%;padding-top: 2px;font-size:1.25em"> Most dangerous areas on campus</div>
-                <div style="padding-left: 2%;font-size:.80em">By Kyle Wizner</div>
-             </div>
-             <!--MAPS-->
-
-             <img id="Default" src="images/maps/allThermal.png" \>
-              <iframe id="defaultMap" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1%2C+col24+from+1WD13RMj71buZvtbr8izMzh3Lk51ZVGuklzW9mWOs+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=44.045227&amp;lng=-123.071917&amp;t=1&amp;z=15&amp;l=col1&amp;y=2&amp;tmplt=2&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=1&amp;hmr=16&amp;hmw=24&amp;hml=ONE_COL_LAT_LNG"></iframe>
-              <iframe id="criminalTresspassingMap" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1%2C+col2+from+1oo_ZydV2kxod_E0jtnVpcuVJrnsbqhOheGR-UeKh+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=44.044843206885005&amp;lng=-123.07457197570803&amp;t=1&amp;z=15&amp;l=col1&amp;y=2&amp;tmplt=2&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=1&amp;hmr=13&amp;hmw=2&amp;hml=ONE_COL_LAT_LNG"></iframe>
-              <iframe id="criminalMischiefMap" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1%2C+col2+from+1oo_ZydV2kxod_E0jtnVpcuVJrnsbqhOheGR-UeKh+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=44.045489&amp;lng=-123.042684366345&amp;t=1&amp;z=15&amp;l=col1&amp;y=2&amp;tmplt=2&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=1&amp;hmr=13&amp;hmw=2&amp;hml=ONE_COL_LAT_LNG"></iframe>
-              <iframe id="theftMap" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1%2C+col14+from+1UWxPy6omHlq3PcZGN7IN5FzC8ymIfqb-OVo4oiaI+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=44.04552790466049&amp;lng=-123.07260444970706&amp;t=1&amp;z=15&amp;l=col1&amp;y=2&amp;tmplt=2&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=1&amp;hmr=15&amp;hmw=14&amp;hml=ONE_COL_LAT_LNG"></iframe>
-              <iframe id="warrentArrestMap" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1%2C+col2+from+1Qo7q-SzywHf8KIVC4aPOWDj35E3CISEkSenYmzp8+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=44.04713192781901&amp;lng=-123.07774198150634&amp;t=1&amp;z=15&amp;l=col1&amp;y=2&amp;tmplt=2&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=1&amp;hmr=15&amp;hmw=2&amp;hml=ONE_COL_LAT_LNG"></iframe>
-              <iframe id="bikeTheftMap" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col1%2C+col6+from+1eUnzcBP5cQSdecfUyrLdZcn_W0V7vlluof43j-BJ+limit+1000&amp;viz=HEATMAP&amp;h=true&amp;lat=44.04512689208437&amp;lng=-123.07559726190186&amp;t=1&amp;z=15&amp;l=col1&amp;y=2&amp;tmplt=2&amp;hmd=true&amp;hmg=%2366ff0000%2C%2393ff00ff%2C%23c1ff00ff%2C%23eeff00ff%2C%23f4e300ff%2C%23f4e300ff%2C%23f9c600ff%2C%23ffaa00ff%2C%23ff7100ff%2C%23ff3900ff%2C%23ff0000ff&amp;hmo=1&amp;hmr=13&amp;hmw=6&amp;hml=ONE_COL_LAT_LNG"></iframe>
-              <!--END MAPS-->
-
-              <!--button 1-->
-              <div id="bt1">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      1
-                    </button>
-                    <ul class="dropdown-menu pull-right">
-                     <div style="margin-left:5px">
-                      <p>UO RIVERFRONT:</p>
-                      <p> The third most crime-intensive area around campus behind Knight Library and Spencer View is the UO Riverfront.
-              The Riverfront, just beyond Franklin Blvd may be the third heaviest area for crime around campus, but the majority of those crimes were of the same nature.
-              Over the past year the Riverfront has seen more warrant arrests than any other area. Criminal trespassing is also a popular crime in the area. According to Kelly, those crimes are usually less about students and more about the homeless population in Eugene.
-              “[Those charges] are usually going to derive from illegal camping on university property,” Kelly said. </p>
-              <p> “So those are in locations where people are found to be camping illegally on the property or otherwise on university property in those areas… and conducting illegal activity, and upon contact we're finding that they have outstanding warrants.”
-              Often times those warrant arrests are for failure to appear in court, but in some cases it’s for more serious charges such as violating parole, according to Kelly.
-              So while the UO Riverfront may be relatively free of the most common campus crimes such as theft, the data shows it’s one of the more dangerous places for students to be wandering around alone. </p>
-              </div>
-                  </ul>
-
-                  <!--picture3-->
-                  <ul id="picture1" class="dropdown-menu pull-left">
-                   <div style="margin-left:5px">
-                    <img src="images/defaultPics/research.jpg"/>
-                   </div>
-                </ul>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/buttons.css" rel="stylesheet">
+        <script src="js/jQuery/jquery-2.1.1.js" type="text/javascript">
+        </script>
+        <script async charset="utf-8" src=
+        "https://platform.twitter.com/widgets.js">
+        </script>
+        <link href=
+        "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+        rel="stylesheet">
+        <link href=
+        "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"
+        rel="stylesheet">
+        <script src=
+        "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js">
+        </script>
+        <script src="https://maps.google.com/maps/api/js?sensor=false&amp;v=3"
+        type="text/javascript">
+        </script>
+        <title>
+            Crimes
+        </title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row" style="padding:0">
+                <div class="animated bounceInLeft">
+                    <div class="col-md-10" id="bodyMap" style="padding:0">
+                        <div id="navBar">
+                            <a href="https://www.dailyemerald.com"><img id=
+                            "emerald" src="images/Emerald-logo.jpg"></a>
+                            <a href=
+                            "https://www.twitter.com/DailyEmerald"><img id=
+                            "twitter" src="images/twitter.png"></a>
+                            <div style=
+                            "padding-left: 2%;padding-top: .5%;font-size:1.50em">
+                            Campus Crime Heat Map
+                            </div>
+                            <div style=
+                            "padding-left: 2%;padding-top:.1%;font-size:.90em">
+                                By Kyle Wizner and Noah McGraw
+                            </div>
+                        </div><!--MAPS-->
+                        <img id="Default" src="images/maps/allThermal.png">
+                        <img id="defaultMap" src="images/maps/all.png">
+                        <img id="criminalTresspassingMap" src=
+                        "images/maps/trespass.png"> <img id="theftMap" src=
+                        "images/maps/theft.png"> <img id="warrentArrestMap"
+                        src="images/maps/warrent.png"> <img id=
+                        "criminalMischiefMap" src=
+                        "images/maps/criminalMis.png"> <img id="bikeTheftMap"
+                        src="images/maps/bike_theft.png"> <!--END MAPS-->
+                        <div id="welcome">
+                            <div style="margin-top:20px;margin-left:20px;">
+                                <p>
+                                    Last week, the University of Oregon Police
+                                    Department sent out two campus crime
+                                    alerts: One for aggravated assault, one for
+                                    armed robbery.
+                                </p>
+                                <p>
+                                    These crime alerts and advisory warnings
+                                    students receive from the UOPD only show a
+                                    glimpse of criminal activity on campus each
+                                    week. The Emerald gathered data on all
+                                    crimes reported to the UOPD between Nov.
+                                    24, 2014 and Nov. 24, 2015: A year at UO in
+                                    crime.
+                                </p>
+                                <p>
+                                    These numbers refer to crimes committed on
+                                    UO property and dealt with by the UOPD. For
+                                    this map, Drug and Liquor Violations were
+                                    omitted in order to focus the data more
+                                    toward crimes concerning public safety.
+                                </p>
+                                <p>
+                                    The most common crimes were:<br>
+                                </p>
+                                <ul>
+                                    <li>Theft: 92 incidents were reported in
+                                    almost every major building or parking lot
+                                    on campus. This number excludes bike
+                                    thefts, which are common enough to warrant
+                                    their own category.
+                                    </li>
+                                    <li>Warrant arrests: Warrant arrests came
+                                    in second and tended to congregate in areas
+                                    slightly off campus, such as the Baker
+                                    Center Downtown and the Riverfront Research
+                                    Park.
+                                    </li>
+                                    <li>Bike thefts: Often considered a rampant
+                                    problem on campus and in the greater Eugene
+                                    community, bike theft makes up its own
+                                    category, with 64 reports.
+                                    </li>
+                                </ul><br>
+                                <p>
+                                    The areas with the highest crimes are
+                                    Spencer View Apartments, the Knight Library
+                                    and the Riverfront:
+                                </p>
+                            </div><a id="arrow" onclick="hideIntro()" type=
+                            "button">X</a>
+                        </div><!--button 1-->
+                        <div id="bt1">
+                            <div class="btn-group">
+                                <button aria-expanded="false" aria-haspopup=
+                                "true" class="btn btn-circle dropdown-toggle"
+                                data-toggle="dropdown" type="button">3</button>
+                                <div class="dropdown-menu pull-right" style=
+                                "margin-left: 2em">
+                                    <div style="margin-left:5px">
+                                        <p style="font-size:120%;">
+                                            #3: RIVERFRONT RESEARCH PARK (1295
+                                            Franklin Blvd)
+                                        </p>
+                                        <p>
+                                            The third most crime-intensive area
+                                            around campus behind Knight Library
+                                            and Spencer View is the UO
+                                            Riverfront. The Riverfront, just
+                                            beyond Franklin Blvd may be the
+                                            third heaviest area for crime
+                                            around campus, but the majority of
+                                            those crimes were of the same
+                                            nature. Over the past year the
+                                            Riverfront has seen more warrant
+                                            arrests than any other area.
+                                            Criminal trespassing is also a
+                                            popular crime in the area.
+                                            According to Kelly, those crimes
+                                            are usually less about students and
+                                            more about the homeless population
+                                            in Eugene. “[Those charges] are
+                                            usually going to derive from
+                                            illegal camping on university
+                                            property,” Kelly said.
+                                        </p>
+                                        <p>
+                                            “So those are in locations where
+                                            people are found to be camping
+                                            illegally on the property or
+                                            otherwise on university property in
+                                            those areas… and conducting illegal
+                                            activity, and upon contact we're
+                                            finding that they have outstanding
+                                            warrants.” Often times those
+                                            warrant arrests are for failure to
+                                            appear in court, but in some cases
+                                            it’s for more serious charges such
+                                            as violating parole, according to
+                                            Kelly. So while the UO Riverfront
+                                            may be relatively free of the most
+                                            common campus crimes such as theft,
+                                            the data shows it’s one of the more
+                                            dangerous places for students to be
+                                            wandering around alone.
+                                        </p>
+                                    </div>
+                                </div><!--picture3-->
+                                <div class="dropdown-menu pull-left" id=
+                                "picture1" style="margin-left: 2em">
+                                    <div style="margin-left:5px">
+                                        <img src=
+                                        "images/defaultPics/research.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--button 2-->
+                        <div id="bt2">
+                            <div class="btn-group">
+                                <button aria-expanded="false" aria-haspopup=
+                                "true" class="btn btn-circle dropdown-toggle"
+                                data-toggle="dropdown" type="button">2</button>
+                                <div class="dropdown-menu pull-left" style=
+                                "left: 100%; margin-left: 2em; top: -600%">
+                                    <div style="padding-left:2px;">
+                                        <p style="font-size:120%">
+                                            #2 KNIGHT LIBRARY
+                                        </p>
+                                        <p>
+                                            Crime in the library is all
+                                            “opportunity-based,” according to
+                                            McIver.
+                                        </p>
+                                        <p>
+                                            The Knight Library had the second
+                                            highest number of reported crimes
+                                            last year. Theft was the most
+                                            common, with 10 incidents reported.
+                                            Theft is common in large buildings
+                                            with constant traffic, according to
+                                            the UOPD. The library adds another
+                                            opportunity for thieves, as
+                                            students studying often keep to
+                                            themselves.
+                                        </p>
+                                        <p>
+                                            Knight Library is open to students
+                                            24 hours a day most term days,
+                                            which makes it a likely target for
+                                            people looking to steal expensive
+                                            equipment like laptops or cell
+                                            phones.
+                                        </p>
+                                        <p>
+                                            “There's definitely a criminal
+                                            population that knows if they go in
+                                            there, they may well be able to
+                                            find instances where people have
+                                            left their things on a table while
+                                            they've gotten up to go bring back
+                                            a book,” McIver said. “Then they
+                                            can surreptitiously take stuff
+                                            without anybody really noticing.”
+                                        </p>
+                                        <p>
+                                            To combat crime, the university
+                                            installed lockers for students to
+                                            keep valuable possessions. After
+                                            midnight, security officers are
+                                            stationed at the front of the
+                                            library, checking student IDs.
+                                        </p>
+                                        <p>
+                                            Seven incidents of “criminal
+                                            mischief” were reported at the
+                                            library, the most of any location
+                                            on campus. These usually involve
+                                            people horsing around or otherwise
+                                            not obeying the library’s noise
+                                            ordinances. “There are people
+                                            who'll go in there and they will
+                                            use the facilities inappropriately
+                                            or do other things that are
+                                            inappropriate for people to do in a
+                                            public space,” McIver said.
+                                        </p>An example of weird crime at the
+                                        library: This summer, <a href=
+                                        "%E2%80%9Chttp://www.dailyemerald.com/2015/07/28/uopd-arrests-man-who-claimed-he-had-a-gun-at-knight-library/%E2%80%9C">
+                                        a man walked into Knight Library and
+                                        claimed he had a gun.</a> The man then
+                                        fled and was arrested for interfering
+                                        with the police and disorderly conduct.
+                                        <p></p>
+                                    </div>
+                                </div><!--picture2-->
+                                <div class="dropdown-menu pull-right" id=
+                                "picture2" style="margin-left: 2em">
+                                    <div style="margin-left:5px">
+                                        <img src=
+                                        "images/defaultPics/knight.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--button 3-->
+                        <div id="bt3">
+                            <div class="btn-group">
+                                <div class="dropup">
+                                    <button aria-expanded="false"
+                                    aria-haspopup="true" class=
+                                    "btn btn-circle dropdown-toggle"
+                                    data-toggle="dropdown" type="button">
+                                    <div style="text-align:center">
+                                        1
+                                    </div></button>
+                                    <div class="dropdown-menu" id="button3"
+                                    style="margin-left: 2em">
+                                        <div style="padding-left:2px">
+                                            <p style="font-size:100%">
+                                                #1: SPENCER VIEW (2250
+                                                Patterson St.)
+                                            </p>
+                                            <p>
+                                                Spencer View, a
+                                                university-owned apartment
+                                                complex located about a mile
+                                                away from the UO main campus,
+                                                is no stranger to safety
+                                                concerns. <a href=
+                                                "%E2%80%9Chttp://www.dailyemerald.com/2006/08/15/residents-fed-up-with-spencer-view-thefts/%E2%80%9C">
+                                                Complaints about crime sprees
+                                                from the complex’s residents go
+                                                back as far as 2006.</a>
+                                            </p>
+                                            <p>
+                                                It’s also been home to the most
+                                                crimes in the campus area over
+                                                the past year: 39.
+                                            </p>
+                                            <p>
+                                                The majority of the crimes
+                                                reported at Spencer View are
+                                                generally in line with the rest
+                                                of the campus area, just at a
+                                                much higher volume — namely
+                                                theft.
+                                            </p>
+                                            <p>
+                                                Kelly McIver, public
+                                                information officer for the
+                                                UOPD, thinks that the high
+                                                theft rate might stem more from
+                                                the high concentration of
+                                                people rather than a naturally
+                                                crime intensive area.
+                                            </p>
+                                            <p>
+                                                “Any time you've got a living
+                                                situation where you've got many
+                                                units, every one of those units
+                                                potentially has a vehicle
+                                                connected to it, if it's parked
+                                                there,” McIver said. Spencer
+                                                View’s proximity to a
+                                                well-trafficked street is
+                                                likely a contributing factor as
+                                                well.
+                                            </p>
+                                            <p>
+                                                Derek Landon, a Lane Community
+                                                College student who lived next
+                                                to the complex for two years,
+                                                said he would often see police
+                                                cars at the apartments as he
+                                                came home. He added, however,
+                                                that “it didn’t seem like it
+                                                was anything too different from
+                                                any other complex.”
+                                            </p>
+                                            <p>
+                                                While high numbers can be
+                                                troubling at a glance, it’s not
+                                                always a negative. It could
+                                                mean that more people are
+                                                reporting crimes, according to
+                                                Leah Andrews, the director of
+                                                marketing and communications
+                                                for University Housing.
+                                            </p>
+                                        </div>
+                                    </div><!--picture3-->
+                                    <div class="dropdown-menu pull-right" id=
+                                    "picture3" style="margin-left: 2em">
+                                        <div style="margin-left:5px">
+                                            <img src=
+                                            "images/defaultPics/spencer1.jpg"
+                                            width="80%"><br>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu pull-right" id=
+                                    "picture4" style="margin-left: 2em">
+                                        <div style="margin-left:5px">
+                                            <img src=
+                                            "images/defaultPics/spencer2.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <!--button 2-->
-              <div id="bt2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      2
-                    </button>
-                    <ul class="dropdown-menu pull-left" style=" left:100%; top:-400%;">
-                    <div style="padding-left:2px">
-
-                    <p>Knight Library:</p>
-                      <p> The Knight Library had the second most reported crimes last year. </p>
-
-<p> Theft was the most common, with ten incidents reported. Theft is common in large buildings with constant traffic, according to the UOPD. The library adds another opportunity for thieves, as students studying often keep to themselves. </p>
-
-<p> “You're not up looking around, scanning the room,” McIver said. “If somebody had come and set a bag down and then walked off, and if you saw somebody else pick up that bag and leave, you probably wouldn't remember if that was the same person that brought that bag to begin with. So it's kind of an ideal environment for property crime.” </p>
-
-<p> During certain parts of the term, Knight Library is open 24 hours a day, increasing the number of people who use the facility. McIver thinks this makes it a likely target for people looking to steal expensive equipment like laptops or cell phones. “There's definitely a criminal population that knows if they go in there they may well be able to find instances where people have left their things on a table while they've gotten up to go bring back a book,” McIver said. “Then they can surreptitiously take stuff without anybody really noticing.” </p>
-
-<p> Seven incidents of Criminal Mischief were reported at the library, the most of any location on campus. These usually involve people horsing around, or otherwise not obeying the library’s noise ordinances. “There are people who'll go in there and they will use the facilities inappropriately or do other things that are inappropriate for people to do in a public space,” McIver said. </p> </div>
-
-                    </ul>
-
-                    <!--picture2-->
-                    <ul id="picture2" class="dropdown-menu pull-right">
-                     <div style="margin-left:5px">
-                      <img src="images/defaultPics/knight.jpg"/>
-                     </div>
-
-                  </ul>
-                </div>
-              </div>
-
-              <!--button 3-->
-              <div id="bt3">
-
-                <div class="btn-group">
-                  <div class="dropup">
-                    <button type="button" class="btn btn-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      3
-                    </button>
-                    <ul id="button3" class="dropdown-menu">
-                     <div style="padding-left:2px">
-
-                     <p>Spencer View Apartments:</p>
-                      <p> Spencer View is a university-owned apartment complex located about a mile off campus at 2250 Patterson Street. The complex is located next to two schools and a large city park.
-It’s been home to the most potentially dangerous crimes in the campus area over the past year.
-The majority of the crimes reported at Spencer View are generally in line with the rest of the campus area, just at a much higher volume than is seen anywhere else. The apartment complex has a very high number of theft, specifically vehicle and bike theft.
-McIver thinks that the high theft rate might stem more from the high concentration of people rather than a naturally crime intensive area.
-“Any time you've got a living situation where you've got many units, every one of those units potentially has a vehicle connected to it, if it's parked there.” McIver said. “You have bikes that many of the people have. Those bikes are both near the dwellings and also in bike racks.” </p>
-
-<p> McIver also believes that the apartment complex’s location on a city street can increase the crime rate when compared to one of the dorms on campus.
-“Basically you've got a combination of more people, and more opportunities for things to happen to that property,” McIver said.
-While the high crime rate can be troubling at a glance, McIver points out that it’s not always a negative. </p>
-<p> “Housing does a really good job of staying connected with their tenants and coaching them to report suspicious activity and report crimes,” he said.
-“I think you probably have a higher than normal level of reporting that happens, which is good…there's probably a higher percentage of people from that location that are willing and interested in reporting crimes or reporting suspicious conditions.” McIver said.
-Derek Landon, an LCC student who lived next to Spencer View for two years has a similar opinion.
-“There were multiple times when I would be coming home and I would see police at the apartments,” He said. “But it didn’t seem like it was anything too different from any other complex.”
-While the theft and other small crimes at Spencer View might be due to natural circumstances, the apartment complex has also seen a few more serious crimes over the past year including DUIIs, burglary and failure to register a sex offender. </p>
-
-<p> The high theft rates aren’t going unnoticed either. Director of Marketing and Communications for University Housing Leah Andrews says that precautions are being taken. </p>
-
-<p> “University Housing representatives from Spencer View recently met with UOPD to discuss additional safety measures like improved lighting and closed circuit cameras.” Andrews said.  </p> </div>
-</ul>
-<!--picture3-->
-<ul id="picture3" class="dropdown-menu pull-right">
- <div style="margin-left:5px">
-  <img width="80%" src="images/defaultPics/spencer1.jpg"/><br>
-</ul>
-<ul id="picture4" class="dropdown-menu pull-right">
- <div style="margin-left:5px">
-  <img src="images/defaultPics/spencer2.jpg"/>
- </div>
-</ul>
-                </div>
-              </div>
-            </div>
-            </div>
-            </div>
-            <div class="animated bounceInDown">
-              <div class="col-md-2 col-sm-3 col-xs-3" id="sideColumn">
-
-
-              <div class="animated bounceInDown">
-                <div class="btn-group">
-                    <button onclick="showMap('#Default')" type="button" class="btn btn-block">
-                      <div style="word-wrap: break-word;">
-                        Top 3 crime heavy <br>locations
-                      </div>
-                    </button>
-                </div>
-                  <div class="btn-group">
-                      <button type="button" class="btn btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Top 5 <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu option">
-                        <li><a onclick="showMap('#defaultMap')" href="#">All crimes</a></li>
-                        <li><a onclick="showMap('#theftMap')" href="#">1) Theft</a></li>
-                        <li><a onclick="showMap('#warrentArrestMap')" href="#">2) Warrent Arrest</a></li>
-                        <li><a onclick="showMap('#bikeTheftMap')" href="#">3) Bike Theft</a></li>
-                        <li><a onclick="showMap('#criminalTresspassingMap')" href="#">4) Criminal Trespass</a></li>
-                        <li><a onclick="showMap('#criminalMischiefMap')" href="#">5) Criminal Mischief</a></li>
-                      </ul>
-                  </div>
-
-<!--
+                <div class="animated bounceInDown">
+                    <div class="col-md-2 col-sm-3 col-xs-3" id="sideColumn">
+                        <div class="animated bounceInDown">
+                            <div class="btn-group">
+                                <button class="btn btn-block" onclick=
+                                "showMap('#Default')" type="button">
+                                <div style="word-wrap: break-word;">
+                                    By location
+                                </div></button>
+                            </div>
+                            <div class="btn-group">
+                                <button aria-expanded="false" aria-haspopup=
+                                "true" class="btn btn-block dropdown-toggle"
+                                data-toggle="dropdown" type="button">By type of
+                                crime<span class="caret"></span></button>
+                                <ul class="dropdown-menu option">
+                                    <li>
+                                        <a href="#" onclick=
+                                        "showMap('#defaultMap')">All crimes</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick=
+                                        "showMap('#theftMap')">1) Theft</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick=
+                                        "showMap('#warrentArrestMap')">2)
+                                        Warrent Arrest</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick=
+                                        "showMap('#bikeTheftMap')">3) Bike
+                                        Theft</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick=
+                                        "showMap('#criminalTresspassingMap')">4)
+                                        Criminal Trespass</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick=
+                                        "showMap('#criminalMischiefMap')">5)
+                                        Criminal Mischief</a>
+                                    </li>
+                                </ul>
+                            </div><!--
                 <div class="btn-group">
 
                     <button type="button" class="btn btn-circle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -185,57 +424,63 @@ While the theft and other small crimes at Spencer View might be due to natural c
                     </ul>
                 </div>
 -->
-              </div>
-
-            </div> <!--end side column-->
+                        </div>
+                    </div><!--end side column-->
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-</body>
-<script type="text/javascript">
-//For smoother entrance
-var content = document.getElementById("sideColumn");
-  content.style.display="none";
-  setTimeout(function(){
-    content.style.display="block";
-  }, 1000);
+        <script type="text/javascript">
+        //For smoother entrance
+        var content = document.getElementById("sideColumn");
+        content.style.display="none";
+        setTimeout(function(){
+        content.style.display="block";
+        }, 1000);
+
+
+
+        function hideIntro() {
+        $('#welcome').addClass('animated slideOutLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){{
+        $('#welcome').removeClass("animated slideOutLeft");
+        $('#welcome').hide();
+        }});
+
+        }
 
 
 
 
-
-
-
-  function showMap(s) {
-  	var maps = ['#theftMap','#bikeTheftMap','#criminalMischiefMap','#criminalTresspassingMap','#defaultMap', "#Default"];
-    var defaultButtons = ['#bt1','#bt2','#bt3'];
-  	var i;
-    var j;
-    var k;
-    //openingMap
-    if(s == '#Default') {
-      for(j = 0; j<3; j++) {
+        function showMap(s) {
+        var maps = ['#theftMap','#bikeTheftMap','#criminalMischiefMap','#criminalTresspassingMap',"#warrentArrestMap",'#defaultMap', "#Default"];
+        var defaultButtons = ['#bt1','#bt2','#bt3'];
+        var i;
+        var j;
+        var k;
+        //openingMap
+        if(s == '#Default') {
+        for(j = 0; j<3; j++) {
         console.log("Showing button")
         $(defaultButtons[j]).show();
-      }
-    }
-    // Hide/Show Default Buttons
-    else {
-      for(k = 0; k<3; k++) {
+        }
+        }
+        // Hide/Show Default Buttons
+        else {
+        for(k = 0; k<3; k++) {
         console.log("Hiding button")
         $(defaultButtons[k]).hide();
-      }
-    }
-    //end of opening map
+        }
+        }
+        //end of opening map
 
 
-  	for (i = 0; i < 7; i++) {
-  		if(s != maps[i]) {
-  			$(maps[i]).hide();
-  		}
-  		$(s).show();
-  	}
-  }
+        for (i = 0; i < 7; i++) {
+        if(s != maps[i]) {
+            $(maps[i]).hide();
+        }
+        $(s).show();
+        }
+        }
 
-</script>
+        </script>
+    </body>
 </html>
