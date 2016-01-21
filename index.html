@@ -38,7 +38,7 @@
 
       <div class="btn-group btn-group-justified" role="group" aria-label="...">
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default">By location</button>
+          <button type="button" onclick="showMap('#Default')"class="btn btn-default">By location</button>
         </div>
         <div class="btn-group" role="group">
           <button type="button" class="btn btn-default dropdown-toggle"
@@ -75,7 +75,7 @@
           </ul>
         </div>
         <div class="btn-group" role="group">
-          <button type="button" href="full.html" class="btn btn-default"><a href="full.html">See the whole story</a></button>
+          <button type="button" onclick="window.location.href='full.html'" class="btn btn-default">See Whole Story</button>
         </div>
         <div class="btn-group" role="group">
           <button type="button" onclick="showIntro()" class="btn btn-default">Show intro</button>
@@ -97,7 +97,7 @@
                         "criminalMischiefMap" src=
                         "images/maps/criminalMis.png"> <img class="fit" id="bikeTheftMap"
                         src="images/maps/bike_theft.png"> <!--END MAPS-->
-                        <div id="welcome">
+                        <div id="welcome" style="display:block">
                             <div style="margin-top:20px;margin-left:20px; padding-bottom:2%;">
                               <a id="arrow" onclick="hideIntro()" type=
                               "button">X</a>
@@ -419,6 +419,21 @@
 
         <script type="text/javascript">
         //For smoother entrance
+
+        var b = false;
+
+        document.onclick = function() {
+          var intro = document.getElementById("welcome");
+          if(b == false){
+            $('#welcome').addClass('animated slideOutLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){{
+            $('#welcome').removeClass("animated slideOutLeft");
+            $('#welcome').hide();
+            }});
+
+            b = true;
+          }
+        }
+
 
 
         function hideIntro() {
